@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
+// Company: Peter
 // Engineer: 
 // 
 // Create Date: 2021/09/24 21:05:28
@@ -58,7 +58,7 @@ module lstm_layer(  );
     
     
     always begin
-     #5 clk=~clk; // аж╠Б╢б 10
+     #5 clk=~clk; // О©╫ж╠О©╫О©╫ 10
     end
    integer clk_count; 
     always @(posedge clk) begin
