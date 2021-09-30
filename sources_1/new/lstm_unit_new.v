@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
+// Company: Peter
 // Engineer: 
 // 
 // Create Date: 2021/09/14 13:13:48
@@ -91,7 +91,7 @@ function [9:0] my_mul;
         tmp_mul  = a*b;
         
         if (tmp_mul < 0) begin
-            if (& tmp_mul[19:14] == 0) begin //Ã¹¹øÂ° bit Æ÷ÇÔÇØ¾ßÇÏ³ª”g 
+            if (& tmp_mul[19:14] == 0) begin //Ã¹ï¿½ï¿½Â° bit ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½ï¿½Ï³ï¿½ï¿½g 
                 my_mul = {1'b1,{(10 -1){1'b0}}};
             end
             else begin
@@ -116,7 +116,7 @@ function [9:0] my_add;
         tmp_add  = a + b;
         
         if (tmp_add < 0) begin
-            if (& tmp_add[10:9] == 0) begin //Ã¹¹øÂ° bit Æ÷ÇÔÇØ¾ßÇÏ³ª”g 
+            if (& tmp_add[10:9] == 0) begin //Ã¹ï¿½ï¿½Â° bit ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½ï¿½Ï³ï¿½ï¿½g 
                 my_add = {1'b1,{(10 -1){1'b0}}};
             end
             else begin
@@ -308,7 +308,7 @@ endfunction
                     if (clk_count_out < 302) begin
    
                         c_next = my_add( my_mul (sigmoid_output_u[clk_count_out],tanh_output_c[clk_count_out]) , my_mul (sigmoid_output_f[clk_count_out], c_matrix[clk_count_out]));                    
-                        a_next = my_mul(sigmoid_output_o[clk_count_out], c_next); //´Ü¼øÈ÷ outputÀÌ ³ª°¡´Â °ÍÀÌ ¾Æ´Ï¶ó tanh Åë°ú ÇØ¾ßÇÔ
+                        a_next = my_mul(sigmoid_output_o[clk_count_out], c_next); //ï¿½Ü¼ï¿½ï¿½ï¿½ outputï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Æ´Ï¶ï¿½ tanh ï¿½ï¿½ï¿½ ï¿½Ø¾ï¿½ï¿½ï¿½
                         clk_count_out = clk_count_out + 1;
                     end
                     else begin
