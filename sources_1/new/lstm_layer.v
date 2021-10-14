@@ -40,8 +40,8 @@ module lstm_layer(  );
     
     wire total_done; wire total_output_done;
     
-     wire signed  [9:0] check_c;
-      wire signed  [9:0] check_a;
+    wire signed  [9:0] check_c;
+    wire signed  [9:0] check_a;
 
     assign total_done = done[2];
     assign total_output_done = output_done[2];
